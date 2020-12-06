@@ -1,0 +1,171 @@
+<html lang="en">
+
+<head>
+    <style>
+        
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        
+        li {
+          float: left;
+          border-right: azure;
+        }
+        
+        li:last-child{
+            border-right: none;
+
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+
+       
+
+         div.transbox{
+           margin: 25px;
+           background-color: #ffffff;
+           border: 1px dashed black;
+           opacity:0.8;
+         }
+
+         div.transbox p{
+           margin: 5%;
+           font-weight: bold;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           font-style: italic;
+           color:#000000;
+           opacity:1;
+         }
+
+         div.header {
+            width: 100%;
+            height: 20%;
+            background-image: url('header_background.jpeg');
+        }
+
+        div.header h1{
+            text-align: center;
+            text-decoration: blueviolet;
+            color: cornsilk;
+            padding: 60px;
+            
+          }
+        
+          div.transbox2{
+           margin: 65px;
+           background-color: #000000;
+           border: 1px dashed white;
+           opacity:1;
+         }
+
+         div.transbox2 p{
+           margin: 5%;
+           font-weight: bold;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           font-style: italic;
+           color:#ffffff;
+           opacity:1;
+         }
+
+
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Demo</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link href="main.css" rel="stylesheet">      
+</head>
+
+<body>
+    <div class="header">
+       <h1> AI DEMO</h1> 
+    </div>
+    <div class="body">
+        <div class="left">
+          <div class="transbox" >
+            <p>The lungs are a pair of spongy, air filled organs located on either side of the chest(thorax).
+              The trachea(windpipe) conducts inhaled air into the lungs through it's tubular branches, called
+              bronchi. The bronchi then divide ito smaller and smaller branches(brochioles), finally becoming 
+              microscopic.
+            </p>
+          </div>
+          <div class="transbox">
+            <p>Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may be filled
+            with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills and difficulty in
+            breathing. A variety of organisms, including bacteria, viruses and fungi can cause pneumonia.
+            </p>
+          </div>
+        </div>        
+        <div class="middle">
+          <h2> Image Classifier</h2>  
+          <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Choose...
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+        <div class="image-section" style="display:none;">
+          <div class="img-preview">
+              <div id="imagePreview">
+              </div>
+          </div>
+          <div>
+              <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+          </div>
+      </div>
+      <div class="loader" style="display:none;"></div>
+        </div>
+        <div class="right">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="transbox2" >
+            <p>
+              <div class="loader" style="display:none;"></div>
+            </p>
+            </div>
+        </div>
+    <nav class="navbar">
+        <div class="navmenu">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#developers">Developers</a></li>
+              </ul>
+        </div>
+    </nav>
+</body>
+
+<footer>
+
+    <!-- <script src='main.js'; type="text/javascript"></script>     -->
+</footer>
+
+</html>
