@@ -1,9 +1,11 @@
 $(document).ready(function () {
     // Init
     console.log("initialized");
-    // $('.image-section').hide();
-    // // $('.loader').hide();
-    // $('#result').hide();
+    $('.image-section').hide();
+    // $('.loader').hide();
+    $('#result').hide();
+
+    let copyImgString;
 
     // Upload Preview
     const readURL=(input)=> {
@@ -12,6 +14,7 @@ $(document).ready(function () {
             console.log("in if");
             var reader = new FileReader();
             reader.onload = function (e) {
+                copyImgString=e.target.result;
                 $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                 $('#imagePreview').fadeIn(650);
             }
@@ -23,7 +26,7 @@ $(document).ready(function () {
         $('.image-section').show();
         $('#btn-predict').show();
         $('#result').text('');
-        // $('#result').hide();
+        $('#result').hide();
         console.log("printing");
         console.log(readURL);
         readURL(document.getElementById("imageUpload"));
